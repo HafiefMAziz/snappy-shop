@@ -17,10 +17,10 @@ switch (command.toLowerCase()) {
         TurtleController.addTurtle(params);
         break;
     case 'sell':
-        TurtleController.sell(params);
+        TurtleController.sellTurtle(params);
         break;
     case 'countprice':
-        TurtleController.countprice(params);
+        TurtleController.countPrice(params);
         break;
     case 'detail':
         TurtleController.detail(params);

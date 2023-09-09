@@ -13,6 +13,26 @@ class TurtleController {
         const message = TurtleBox.createBox(params);
         View.message(message);
     }
+    static addTurtle (params) {
+        const message = TurtleBox.addTurtle(params);
+        View.message(message);
+    }
+    static sellTurtle (params) {
+        const message = TurtleBox.sellTurtle(params);
+        View.message(message);
+    }
+    static countPrice (params) {
+        const message = TurtleBox.countPrice(params);
+        View.message(message);
+    }
+    static detail (params) {
+        const box = TurtleBox.detail(params);
+        View.detail(box);
+    }
+    static filter (params) {
+        const turtles = TurtleBox.filter(params);
+        View.filter(turtles, params[0]);
+    }
 }
 
 module.exports = TurtleController;

@@ -57,5 +57,23 @@
         ]
       }
     ]
+  },
+  {
+    "id": 3,
+    "boxName": "Third Pond",
+    "turtles": [
+      {
+        "id": 1,
+        "name": "Aligator Snapping Turtle",
+        "species": "SnappingTurtle",
+        "price": 150000,
+        "patterns": [
+          "black",
+          "red"
+        ],
+        "size": 5,
+        "weight": 1751
+      }
+    ]
   }
 ]
