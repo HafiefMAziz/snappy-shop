@@ -37,10 +37,14 @@ class TurtleBox {
         const boxName = params[0];
         const turtle = params.slice(1);
         let [name, species, price, patterns, size, weight] = turtle;
+        if (turtle.length === 5){
+            species = "SnappingTurtle";
+            [name, price, patterns, size, weight] = turtle;
+        }
         patterns = patterns.slice(1, patterns.length - 1).split(',');
         boxes.forEach(box => {
             const lastIndex = box.turtles.length > 0 ? box.turtles[box.turtles.length - 1].id : 0;
-            if(box.boxName === boxName){
+            if(box.boxName.toLowerCase() === boxName.toLowerCase()){
                 if(species === "SnappingTurtle"){
                     box.turtles.push(new SnappingTurtle(lastIndex+1, name, species, price, patterns, size, weight));
                 }else if(species === "Tortoise"){
